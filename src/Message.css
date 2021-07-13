@@ -1,0 +1,7 @@
+.text__message {
+    color: aqua;
+    font-size: 32px;
+    font-weight: 700;
+    text-shadow: 1px 1px 1px rgb(223, 223, 223);
+    letter-spacing: 6px;
+}
