@@ -149,3 +149,26 @@
   background-color: #585a5f;
   min-height: 100vh;
 }
+
+.profile__img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.profile__data {
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+
+.profile__span {
+  font-weight: 700;
+}
+.profile__heading {
+  font-size: 28px;
+  font-weight: 400;
+  margin-top: -30px;
+}
+
+.profile__checkbox {
+  padding-top: 10px;
+}

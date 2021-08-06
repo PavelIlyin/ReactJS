@@ -1,4 +1,5 @@
 import { ADD_MESSAGE, DELETE_MESSAGE } from "../Action/messages";
+import { v4 as uuidv4 } from 'uuid';
 
 const initialState = {
     messages: [
@@ -17,13 +18,14 @@ export default function messagesReducer(state = initialState, action) {
         case ADD_MESSAGE: {
             return {
                 ...state,
-                messages: [...state.messages, { id: (Math.random() * 1000000).toFixed(), author: action.payload.author, text: action.payload.text, chatId: action.payload.id }]
+                messages: [...state.messages, { id: uuidv4(), author: action.payload.author, text: action.payload.text, chatId: action.payload.id }]
             }
         }
         case DELETE_MESSAGE: {
             return {
                 ...state,
                 messages: state.messages.filter((item) => item.id !== action.payload.id)
+
             }
         }
         default:

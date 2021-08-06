@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import '../App.css';
 import App from '../App.js';
 import Chats from '../Chats/Chats';
-import ListChat from '../Chats/ListChat';
+import ChatList from '../Chats/ChatList';
 import Profile from '../Profile/Profile.js';
 
 export default function Router() {
@@ -19,7 +19,7 @@ export default function Router() {
             <Switch>
                 <Route path="/" exact component={App} />
                 <Route exact path="/chats" render={() => <Chats />} />
-                <Route path="/chats/:chatId" render={() => <ListChat />} />
+                <Route path="/chats/:chatId" render={() => <ChatList />} />
                 <Route path="/profile" render={() => <Profile />} />
                 <Route>
                     <p>404: not found</p>
