@@ -1,7 +1,7 @@
 import './App.css';
 import { useState, useEffect, useRef } from 'react';
 import TextField from '@material-ui/core/TextField';
-
+import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import { profileSelector } from './Selectors/profile';
 import { useSelector } from 'react-redux';
@@ -20,24 +20,24 @@ const MessageForm = (props) => {
   const { onSubmit } = props;
 
 
-  const [value, setValue] = useState('');
-  const [valueText, setValueText] = useState('');
+  const [ value, setValue ] = useState('');
+  const [ valueText, setValueText] = useState('');
   const inputRef = useRef(null);
   const { classes } = props;
 
   const { name } = useSelector(profileSelector);
 
   useEffect(() => {
-    inputRef.current?.focus();
-    setValue(name);
-  }, []);
+        inputRef.current?.focus();
+        setValue(name);
+   }, []);
 
-
+ 
 
   const handleValue = (event) => {
     setValue(event.target.value)
   }
-
+  
   const handleValueText = (event) => {
     setValueText(event.target.value)
   }
@@ -53,34 +53,32 @@ const MessageForm = (props) => {
   }
 
   return (
-    <form className="form" onSubmit={handleSubmit}>
-      <TextField
+      <form className="form" onSubmit={ handleSubmit }>
+        <TextField
         autoFocus
         required
         label="Name"
-        value={value}
-        onChange={handleValue}
+        value={ value }
+        onChange={ handleValue }
         className={classes.root}
         InputProps={{
-          className: classes.input
-        }}
-        inputRef={inputRef}
-      />
-      <TextField
+            className: classes.input }}
+        inputRef={ inputRef }
+        />
+        <TextField
         label="Your message"
-        multiline maxRows={3}
-        value={valueText}
-        onChange={handleValueText}
+        multiline maxRows={ 3 }
+        value={ valueText }
+        onChange={ handleValueText }
         className={classes.root}
         InputProps={{
-          className: classes.input
-        }}
-      />
-      <button
+            className: classes.input }}
+        />
+        <button
         className="form__button"
         type="submit"
-      >Send my message</button>
-    </form>
+        >Send my message</button>
+      </form>
   )
 
 }
