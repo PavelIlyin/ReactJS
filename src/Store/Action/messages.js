@@ -17,3 +17,15 @@ export const deleteMessage = (id) => ({
         id
     }
 })
+
+export const addMessageWithThunk = (author, text, id) => (dispatch, getState) => {
+
+    dispatch(addMessage(author, text, id))
+
+    if (author !== 'Robot') {
+        setTimeout(() => {
+            dispatch(addMessage('Robot', 'Message sent!', +id))
+
+        }, 1500);
+    }
+}
