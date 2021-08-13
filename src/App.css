@@ -149,3 +149,74 @@
   background-color: #585a5f;
   min-height: 100vh;
 }
+
+.profile__img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.profile__data {
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+
+.profile__span {
+  font-weight: 700;
+}
+.profile__heading {
+  font-size: 28px;
+  font-weight: 400;
+  margin-top: -30px;
+}
+
+.profile__checkbox {
+  padding-top: 10px;
+}
+
+
+.gists__btn-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gists__block {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 40px;
+}
+
+.gists__item {
+  padding: 5px;
+}
+
+.margin_btn {
+  margin-right: 40px;
+}
+
+.gists__loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-block {
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  background-color: rgb(168, 164, 164);
+  padding: 40px;
+}
+
+.login-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+
+}
+
+.login-link {
+  font-size: 18px;
+}

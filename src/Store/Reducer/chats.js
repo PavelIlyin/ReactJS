@@ -16,7 +16,7 @@ export default function chatsReducer(state = initialState, action) {
         case ADD_CHAT: {
             return {
                 ...state,
-                chats: [...state.chats, { name: action.payload.name, id: (Math.random() * 1000000).toFixed() }]
+                chats: [...state.chats, { name: action.payload.name, id: action.payload.id }]
             }
         }
         case DELETE_CHAT: {

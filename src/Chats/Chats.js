@@ -6,6 +6,8 @@ import TextField from '@material-ui/core/TextField';
 import { addChat, deleteChat } from '../Store/Action/chats';
 import { useDispatch, useSelector } from 'react-redux';
 import { chatsSelector } from '../Selectors/chats';
+import { v4 as uuidv4 } from 'uuid';
+
 
 const Chats = () => {
 
@@ -16,7 +18,7 @@ const Chats = () => {
 
     const handleChatNameSubmit = (event) => {
         event.preventDefault()
-        dispatch(addChat(chatName))
+        dispatch(addChat(chatName, uuidv4()))
         setChatName('')
     }
     const handleChatName = (event) => {
