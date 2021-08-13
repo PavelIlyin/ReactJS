@@ -1,7 +1,7 @@
 import './App.css';
 import { useState, useEffect, useRef } from 'react';
 import TextField from '@material-ui/core/TextField';
-
+import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import { profileSelector } from './Selectors/profile';
 import { useSelector } from 'react-redux';
